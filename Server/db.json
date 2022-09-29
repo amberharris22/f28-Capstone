@@ -1,0 +1,30 @@
+[
+    {
+    "id": 1, 
+    "brand": "Volvo",
+    "year": 2019,
+    "color": "Red",
+    "price": "120,000",
+    "picture": "https://orion.soarr.com/photos/16188864/800x/2019-volvo-vnl64t740.5.jpg",
+    "likes": 0
+     
+},
+{
+    "id": 2, 
+    "brand": "Peterbilt",
+    "year": 2022,
+    "color": "White",
+    "price": "125,000",
+    "picture": "https://orion.soarr.com/photos/16104462/800x/2022-peterbilt-389.1.jpg",
+    "likes": 0
+},
+{
+    "id": 3, 
+    "brand": "Volvo",
+    "year": 2015,
+    "color": "Blue",
+    "price": "75,000",
+    "picture": "https://orion.soarr.com/photos/16127441/800x/2015-volvo-vnl64t730.1.jpg",
+    "likes": 0
+}
+]

@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#top{
+    color: #Cf2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/Client/pictures/logo\ image.jpg");
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+h1{
+    margin-right: 80px;
+    margin-bottom: 15px;
+}
+h2{
+    color: #Cf2626;
+}
+h3{
+    padding: 20px;
+    font-size: 28pt;
+}
+.header-2{
+    padding-top: 0px;
+    font-size: 20pt;
+}
+header{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+#menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: silver;
+    align-items: center;
+    height: 35px;
+    
+}
+a{
+    color: #Cf2626;
+    text-decoration: none;
+    /* border: 2px solid #1e1f1f; */
+    padding: 10px 20px;
+    font-size: 14pt;
+}
+
+#menu a:hover{
+    background-color: #1e1f1f;
+    color: #Cf2626;   
+}
+    
+#truckDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.truck-card {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #1e1f1f;
+    border-radius: 15px;
+    background-color: #Cf2626;
+}
+.truck-img {
+    object-fit: cover;
+    width: 250px; 
+    height: 250px;
+    border-radius: 12px;
+    
+}
+#facts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.likes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+}
+
+#input-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    background-color: #Cf2626;
+    border-radius: 12px;
+}
+#radio{
+    display: flex;
+    flex-direction: column;
+    align-items:initial; 
+}
+
+.card {
+    background-color:rgba(192, 192, 192, .7);
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 20px 0 #1e1f1f;
+    padding-bottom: 50px;
+}
+main{
+    background-image: url('/Client/pictures/background\ bw.jpg');
+    width: 100%;
+    height: vh 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+p{
+    padding: 20px 30px;
+    width: 70%;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+button{
+    color: white;
+    background-color: #1e1f1f;
+    padding: 5px 10px;
+}
+#add-truck{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#addTruck{
+    width:fit-content;
+    align-self: center;
+    margin-top: 20px;
+}
