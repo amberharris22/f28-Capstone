@@ -8,15 +8,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/Client/pictures/logo\ image.jpg");
-    height: 100px;
+    background-image: url("/pictures/logo.jpg");
+    height: 90px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 } 
 h1{
-    margin-right: 80px;
+    margin-right: 100px;
     margin-bottom: 15px;
+    font-size: 20pt;
 }
 h2{
     color: #Cf2626;
@@ -43,20 +44,21 @@ header{
     justify-content: center;
     background-color: silver;
     align-items: center;
-    height: 35px;
+    height: 25px;
     
 }
 a{
     color: #Cf2626;
     text-decoration: none;
     /* border: 2px solid #1e1f1f; */
-    padding: 10px 20px;
+    padding: 3px 30px;
     font-size: 14pt;
 }
 
 #menu a:hover{
     background-color: #1e1f1f;
-    color: #Cf2626;   
+    color: #Cf2626;  
+    transition-duration: .4s; 
 }
     
 #truckDisplay{
@@ -82,6 +84,7 @@ a{
     width: 250px; 
     height: 250px;
     border-radius: 12px;
+    border: 1px solid #1e1f1f;
     
 }
 #facts{
@@ -105,6 +108,9 @@ a{
     background-color: #Cf2626;
     border-radius: 12px;
 }
+input{
+    padding: 3px;
+}
 #radio{
     display: flex;
     flex-direction: column;
@@ -112,7 +118,7 @@ a{
 }
 
 .card {
-    background-color:rgba(192, 192, 192, .7);
+    background-color:rgba(192,192,192, .7);
     width: 75%;
     margin: auto;
     display: flex;
@@ -123,11 +129,12 @@ a{
     padding-bottom: 50px;
 }
 main{
-    background-image: url('/Client/pictures/background\ bw.jpg');
+    background-image: url('/pictures/background\ bw.jpg');
     width: 100%;
-    height: vh 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
+    /* height: vh 100%; */
+    /* background-repeat: no-repeat; */
+    background-size:contain;
+    /* position:fixed; */
 
 }
 p{
@@ -141,6 +148,11 @@ button{
     color: white;
     background-color: #1e1f1f;
     padding: 5px 10px;
+    border-radius: 5px;
+}
+button:hover{
+    color: #Cf2626;
+    box-shadow: 0px 10px 15px #1e1f1f;
 }
 #add-truck{
     width: 30%;
@@ -148,7 +160,7 @@ button{
     flex-direction: column;
 }
 
-#addTruck{
+#addTruck, #submitBtn{
     width:fit-content;
     align-self: center;
     margin-top: 20px;

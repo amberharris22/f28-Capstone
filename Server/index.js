@@ -1,6 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
+const path = require('path')
+require('dotenv').config()
 app.use(express.json())
 app.use(cors())
 
@@ -11,4 +13,9 @@ app.post('/addTruck', addTruck)
 app.delete('/deleteTruck/:id', deleteTruck)
 app.put('/updateLikes/:id', updateLikes)
 
-app.listen(5050, ()=> console.log('Listening on port 5050'))
+app.get('/', (req, res) => (res.sendFile(path.join(__dirname, '../Client/1.main.html'))))
+app.use(express.static(path.join(__dirname, '../Client')))
+
+const port = process.env.PORT || 4000;
+
+app.listen(port, ()=> console.log(`Listening on port ${port}`))

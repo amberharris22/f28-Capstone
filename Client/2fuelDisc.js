@@ -4,7 +4,7 @@ let form = document.querySelector('#input-form')
 const submitInfo = (e) => {
     e.preventDefault()
     
-    alert("Your request has been submitted successfully. \nWe will contact you within 2 business days.");
+    alert("Your request has been submitted successfully.");
 
     let ownerInput = document.querySelector('#owner')
     let companyInput = document.querySelector('#company')
