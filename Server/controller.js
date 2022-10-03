@@ -45,5 +45,10 @@ module.exports = {
             res.status(200).send(trucks)
         }else{
             res.status(400).send('likes is already at 0')}
+    },
+
+    getContact: (req,res) => {
+        res.status(200).send(contactInfo)
+
     }
 }

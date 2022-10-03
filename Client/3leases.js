@@ -1,47 +1,12 @@
-const baseURL = 'http://localhost:4000'  //remove all baseURL to deploy
+// const baseURL = 'http://localhost:4000'  //remove all baseURL to deploy
 
 let showTrucks = document.querySelector('#truckDisplay')
 let addBtn = document.querySelector('#addTruck')
-
-
 
 const displayTrucks = (arr) => {
     for (let i =0; i<arr.length; i++){
         createTruckCard(arr[i])
     }
-}
-
-const addTruck = (e) => {
-    e.preventDefault()
-
-    let brandInput = document.querySelector('#brand')
-    let yearInput = document.querySelector('#year')
-    let priceInput = document.querySelector('#price')
-    let colorInput = document.querySelector('#color')
-    let picInput = document.querySelector('#pic')
-
-    let newTruck = {
-        brand: brandInput.value,
-        year: yearInput.value,
-        color: colorInput.value,
-        price: priceInput.value,
-        picture: picInput.value
-    }
-
-    axios.post(`${baseURL}/addTruck`, newTruck)
-        .then((res) => {
-            showTrucks.innerHTML = ''
-            displayTrucks(res.data)
-
-            brandInput.value = ''
-            yearInput.value = ''
-            priceInput.value = ''
-            colorInput.value = ''
-            picInput.value = ''
-        })
-        .catch((err) => {
-            console.log(err)
-        })
 }
 
 const createTruckCard = (truck) => {
@@ -66,10 +31,8 @@ const createTruckCard = (truck) => {
     showTrucks.appendChild(truckCard)
 }
 
-
 const getAllTrucks = () => {
-    console.log('hi')
-    axios.get(`${baseURL}/getTrucks`)
+    axios.get(`/getTrucks`)
         .then((res) => {
             displayTrucks(res.data)
             // console.log(res.data)
@@ -79,8 +42,41 @@ const getAllTrucks = () => {
         })
 }
 
+const addTruck = (e) => {
+    e.preventDefault()
+
+    let brandInput = document.querySelector('#brand')
+    let yearInput = document.querySelector('#year')
+    let priceInput = document.querySelector('#price')
+    let colorInput = document.querySelector('#color')
+    let picInput = document.querySelector('#pic')
+
+    let newTruck = {
+        brand: brandInput.value,
+        year: yearInput.value,
+        color: colorInput.value,
+        price: priceInput.value,
+        picture: picInput.value
+    }
+
+    axios.post(`/addTruck`, newTruck)
+        .then((res) => {
+            showTrucks.innerHTML = ''
+            displayTrucks(res.data)
+
+            brandInput.value = ''
+            yearInput.value = ''
+            priceInput.value = ''
+            colorInput.value = ''
+            picInput.value = ''
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
+
 const deleteTruck = (id) =>{
-    axios.delete(`${baseURL}/deleteTruck/${id}`)
+    axios.delete(`/deleteTruck/${id}`)
     .then((res) => {
         showTrucks.innerHTML = ''
         displayTrucks(res.data)
@@ -91,7 +87,7 @@ const deleteTruck = (id) =>{
 }
 
 const updateTruck = (id, type) => {
-    axios.put(`${baseURL}/updateLikes/${id}`, {type})
+    axios.put(`/updateLikes/${id}`, {type})
     .then((res) => {
         showTrucks.innerHTML = ''
         displayTrucks(res.data)

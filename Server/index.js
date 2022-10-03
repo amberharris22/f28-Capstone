@@ -6,12 +6,13 @@ require('dotenv').config()
 app.use(express.json())
 app.use(cors())
 
-const{getTrucks, addTruck, deleteTruck, updateLikes}=require('./controller')
+const{getTrucks, addTruck, deleteTruck, updateLikes, getContact}=require('./controller')
 
 app.get('/getTrucks', getTrucks)
 app.post('/addTruck', addTruck)
 app.delete('/deleteTruck/:id', deleteTruck)
 app.put('/updateLikes/:id', updateLikes)
+app.get('/contact', getContact)
 
 app.get('/', (req, res) => (res.sendFile(path.join(__dirname, '../Client/1.main.html'))))
 app.use(express.static(path.join(__dirname, '../Client')))
