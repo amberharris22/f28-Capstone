@@ -51,6 +51,7 @@ a{
     text-decoration: none;
     padding: 3px 30px;
     font-size: 14pt;
+    font-weight: 600;
 }
 #menu a:hover{
     background-color: #1e1f1f;
