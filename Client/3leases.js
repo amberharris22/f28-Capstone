@@ -1,5 +1,3 @@
-// const baseURL = 'http://localhost:4000'  //remove all baseURL to deploy
-
 let showTrucks = document.querySelector('#truckDisplay')
 let addBtn = document.querySelector('#addTruck')
 
@@ -35,7 +33,6 @@ const getAllTrucks = () => {
     axios.get(`/getTrucks`)
         .then((res) => {
             displayTrucks(res.data)
-            // console.log(res.data)
         })
         .catch((err) => {
             console.log(err)

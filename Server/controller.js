@@ -8,7 +8,6 @@ module.exports = {
 
     addTruck: (req, res) => {
         const {brand, year, color, price, picture} = req.body
-        // console.log(req.body)
         let newTruckObj = {
             id: truckId,
             brand: brand,
@@ -18,7 +17,6 @@ module.exports = {
             picture: picture,
             likes: 0
         }
-        // console.log(newTruckObj)
         trucks.push(newTruckObj)
         truckId++
 
@@ -26,8 +24,6 @@ module.exports = {
     },
     deleteTruck: (req, res) => {
         const index = trucks.findIndex(elem => elem.id === +req.params.id)
-        // console.log(index)
-        // console.log(req.params.id)
         trucks.splice(index, 1)
 
         res.status(200).send(trucks)

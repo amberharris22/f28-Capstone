@@ -36,13 +36,12 @@ header{
     top: 0;
     width: 100%;
 }
-
 #menu {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: silver;
+    background-color: rgb(86, 86, 86);
     align-items: center;
     height: 25px;
     
@@ -50,24 +49,27 @@ header{
 a{
     color: #Cf2626;
     text-decoration: none;
-    /* border: 2px solid #1e1f1f; */
     padding: 3px 30px;
     font-size: 14pt;
 }
-
 #menu a:hover{
     background-color: #1e1f1f;
     color: #Cf2626;  
     transition-duration: .4s; 
 }
-    
+main{
+    background-image: url('/pictures/background\ bw.jpg');
+    width: 100%;
+    background-size:contain;
+    background-attachment: fixed;
+    background-position: center;
+} 
 #truckDisplay{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-
 .truck-card {
     display: flex;
     flex-direction: column;    
@@ -92,14 +94,12 @@ a{
     flex-direction: column;
     margin-top: 10px;
 }
-
 .likes {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     padding: 10px;
 }
-
 #input-form{
     display: flex;
     flex-direction: column;
@@ -117,7 +117,6 @@ input{
     flex-direction: column;
     align-items:initial; 
 }
-
 .card {
     background-color:rgba(192,192,192, .7);
     width: 75%;
@@ -129,22 +128,13 @@ input{
     box-shadow: 0 6px 20px 0 #1e1f1f;
     padding-bottom: 50px;
 }
-main{
-    background-image: url('/pictures/background\ bw.jpg');
-    width: 100%;
-    background-size:contain;
-    background-attachment: fixed;
-    background-position: center;
-
-}
 p{
     padding: 20px 30px;
     width: 70%;
     font-size: 14pt;
     font-weight: 600;
-    text-align: justify;
+    text-align:start;
 }
-
 button{
     color: white;
     background-color: #1e1f1f;
@@ -160,17 +150,14 @@ button:hover{
     display: flex;
     flex-direction: column;
 }
-
 #addTruck, #submitBtn{
     width:fit-content;
     align-self: center;
     margin-top: 20px;
 }
-
 .fa{
     padding: 10px;
 }
-
 #contactInfo{
     display: flex;
     justify-content: center;
