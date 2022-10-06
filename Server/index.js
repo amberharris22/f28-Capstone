@@ -14,7 +14,7 @@ app.delete('/deleteTruck/:id', deleteTruck)
 app.put('/updateLikes/:id', updateLikes)
 app.get('/contact', getContact)
 
-app.get('/', (req, res) => (res.sendFile(path.join(__dirname, '../Client/1.main.html'))))
+app.get('/', (req, res) => (res.sendFile(path.join(__dirname, '../Client/main.html'))))
 app.use(express.static(path.join(__dirname, '../Client')))
 
 const port = process.env.PORT || 4000;

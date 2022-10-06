@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&J Capital</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header> 
+        <section id="top">
+             <h1>J&J Capital</h1>
+        </section>
+        <nav>
+            <ul id="menu">
+                <li><a href="/main.html" id="home" class="menuBtn">Home</a></li>
+                <li><a href="/fuelDisc.html" id="fuel" class="menuBtn">Fuel Discount</a></li>
+                <li><a href="/leases.html" id="leases" class="menuBtn">Truck Leases</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <main> 
+        <div class ="card">
+        <h3>Trucks for Lease</h3>
+        <section id="truckDisplay"></section>
+            <br>
+        <h3 class="header-2">Do you have a truck to sale?</h3>
+        <section id="add-truck">
+            <label>Brand:</label> <input type="text" placeholder="Brand" id="brand">
+            <label>Year:</label> <input type="text" placeholder="Year" id="year">
+            <label>Color:</label> <input type="text" placeholder="Color" id="color">
+            <label>Price:</label> <input type="text" placeholder="Price" id="price">
+            <label>Picture:</label> <input type="text" placeholder="Picture URL" id="pic">
+            <button id="addTruck">Add Truck</button>
+        </section>
+    </div>
+        </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = "./leases.js"></script>
+</body>
+</html>
